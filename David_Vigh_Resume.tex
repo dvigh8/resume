@@ -1,0 +1,177 @@
+%-------------------------
+% Resume in Latex
+% Author : David Vigh
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+\usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-0.5in}
+\addtolength{\textheight}{1.0in}
+\usepackage[margin=0.4in]{geometry}
+
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%---------------------------------------------------------------- 
+%                      Custom commands
+%----------------------------------------------------------------
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{0pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[2]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      % \textbf{\small#1 - #2}
+      \textbf{\small#1 - \small#2} 
+    \end{tabular*}\vspace{-13pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \vspace{2pt}
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{\textit{\small#1}} & \textbf{\textit{\small#2}} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\educationSubheading}[3]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\small#1} - {\small#2} & \textbf{\textit{\small#3}} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeHeadingListStart}{\begin{itemize}[leftmargin=0.05in, label={}]}
+\newcommand{\resumeHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-10pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-10pt}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%                      %%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%                      %%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+\thispagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyheadoffset[R]{-0.1cm}
+\fancyfoot[R]{\tiny{No sponsorship required}}
+% \rhead{\tiny{No work authorization/sponsorship required}}
+
+%----------HEADING----------
+\begin{center}
+    \Huge \scshape DAVID VIGH \\ \vspace{1pt}
+    \small (315) 222 - 3004 $|$ 
+    \href{mailto:davidvigh@davidvigh.com}{davidvigh@davidvigh.com} $|$ 
+    \href{https://www.davidvigh.com/}{davidvigh.com} $|$
+    \href{https://github.com/dvigh8}{github.com/dvigh8} \\ \vspace{-5pt}
+\end{center}
+
+
+%-----------EXPERIENCE-----------
+\section{\textbf{EXPERIENCE}}
+
+    % Amgen/Horizon
+    \resumeHeadingListStart
+      \resumeSubheading{Amgen (Formerly Horizon Therapeutics)}{Deerfield, IL}
+    \resumeHeadingListEnd
+        \resumeSubHeadingListStart
+            % Data Engineer II
+            \resumeSubSubheading {Sr. Data Engineer, Data Science \& Advanced Analytics}{Jul 2022 - Present}
+              \resumeItemListStart
+                % XYZ: Accomplished [X] as measured by [Y], by doing [Z]
+                % CAR: Challenge Action Result
+
+
+%-----------EDUCATION-----------
+\section{\textbf{EDUCATION}} 
+    \begin{itemize}[leftmargin=0.05in, label={}]
+        \educationSubheading{Clarkson University}{Masters of Science, Applied Data Science}{}
+        \educationSubheading{Clarkson University}{Bachelors of Science, Computer Science}{}
+    \end{itemize}
+
+
+%-----------PROGRAMMING SKILLS-----------
+\section{\textbf{SKILLS}}
+    \begin{itemize}[leftmargin=0.05in, label={}]
+        \small{\item{
+        \textbf{Languages: }{Python, SQL, Scala, Java, BASH, Powershell, HTML/CSS, Javascript, R} \\
+        \textbf{Libraries \& Frameworks: }{Pandas, Pyspark, GraphDataScience, React, JUnit} \\
+        \textbf{Developer Tools: }{Git, Neo4j, Google Cloud, Azure, AWS, Apache Spark, Snowflake, Databricks, Linux, Android Studio, 
+                                  Docker, Delta} \\
+        }}
+    \end{itemize}
+
+
+%-------------------------------------------
+\end{document}

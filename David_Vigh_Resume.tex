@@ -1,4 +1,4 @@
-%-------------------------
+%unnamedplus-------------------------
 % Resume in Latex
 % Author : David Vigh
 % Based off of: https://github.com/sb2nov/resume
@@ -101,14 +101,14 @@
     \end{tabular*}\vspace{-7pt}
 }
 
-\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-6pt}}
 
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
 \newcommand{\resumeHeadingListStart}{\begin{itemize}[leftmargin=0.05in, label={}]}
 \newcommand{\resumeHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-10pt}}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-15pt}}
 \newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in]}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-10pt}}
 
@@ -146,22 +146,34 @@
         \resumeSubheading{Amgen}{Deerfield, IL}
     \resumeHeadingListEnd
         \resumeSubHeadingListStart
-            \resumeSubSubheading {Sr. Data Engineer}{Jul 2022 - Present}
+            \resumeSubSubheading {Sr. Data Engineer}{Oct 2023 - Present}
             \resumeItemListStart
                 % XYZ: Accomplished [X] as measured by [Y], by doing [Z]
                 % CAR: Challenge Action Result
-                \resumeItem{ did things}
+                \resumeItem{Developed and maintained automated ETL scripts to process the team's
+                            main data sources from various vendors totalling 200+ billion rows over each month. Published 
+                            final datasets in Google Cloud, Databricks, and Azure SQL}
+                \resumeItem{Administered working environments for data scientists, including Linux servers 
+                            and Google Dataproc, ensuring seamless and efficient 
+                            workflows. Made continual improvements to workflow, processes, utilities, and automated 
+                            jobs}
+                \resumeItem{Deployed automatic workflows for regularly recurring data pipelines reducing time to insights from weeks to days}
+                \resumeItem{Assigned tasks and provided thorough feedback to direct reports including offshore consultants }
             \resumeItemListEnd
         \resumeSubHeadingListEnd
     \resumeHeadingListStart
-        \resumeSubheading{Horizon Therapeutics (aquired by Amgen)}{Deerfield, IL}
+        \resumeSubheading{Horizon Therapeutics (acquired by Amgen)}{Deerfield, IL}
     \resumeHeadingListEnd
         \resumeSubHeadingListStart
-            \resumeSubSubheading {Sr. Data Engineer}{Jul 2022 - Present}
+            \resumeSubSubheading {Sr. Data Engineer}{Jul 2022 - Oct 2023}
             \resumeItemListStart
                 % XYZ: Accomplished [X] as measured by [Y], by doing [Z]
                 % CAR: Challenge Action Result
-                \resumeItem{ did things}
+                \resumeItem{Implemented and advocated for Git adoption among our team, streamlining 
+                            collaboration and codebase management}
+                \resumeItem{Achieved a smooth transition to an upgraded data format, evidenced by uninterrupted operations through comprehensive stakeholder engagement}
+                \resumeItem{Enhanced the scope of data by incorporating new claims vendors, leading to a significant increase in insights across all vendor areas}
+                \resumeItem{Guided and supervised a summer intern, leading to the successful development of an internal doctor lookup tool, enhancing internal resource accessibility}
             \resumeItemListEnd
         \resumeSubHeadingListEnd
 
@@ -170,7 +182,10 @@
             \resumeItemListStart
                 % XYZ: Accomplished [X] as measured by [Y], by doing [Z]
                 % CAR: Challenge Action Result
-                \resumeItem{ did things}
+                \resumeItem{Increased operation ability by increasing cloud footprint across multiple cloud vendors}
+                \resumeItem{Continue MDM project development with stakeholders across analytics departments}
+                \resumeItem{Managing and improving the scalability and capabilities of the data science platform }
+                \resumeItem{Improving ETL pipelines with new features and data sources}
             \resumeItemListEnd
         \resumeSubHeadingListEnd
         \resumeSubHeadingListStart
@@ -178,7 +193,9 @@
             \resumeItemListStart
                 % XYZ: Accomplished [X] as measured by [Y], by doing [Z]
                 % CAR: Challenge Action Result
-                \resumeItem{ did things}
+                \resumeItem{Decreased processing time by 5x of monthly deliveries of 10B rows of data}
+                \resumeItem{Designed, built, and maintained multiple MDM projects improving organizational clarity of data sets}
+                \resumeItem{Implemented automatic data pulls from vendor websites using web scraping technology due to vendor not having api}
             \resumeItemListEnd
         \resumeSubHeadingListEnd
         \resumeSubHeadingListStart
@@ -186,7 +203,7 @@
             \resumeItemListStart
                 % XYZ: Accomplished [X] as measured by [Y], by doing [Z]
                 % CAR: Challenge Action Result
-                \resumeItem{ did things}
+                \resumeItem{    Migrated on premises distributed computing environment to GCP to increase platform scalability}
             \resumeItemListEnd
         \resumeSubHeadingListEnd
     \resumeHeadingListStart
@@ -197,9 +214,9 @@
             \resumeItemListStart
                 % XYZ: Accomplished [X] as measured by [Y], by doing [Z]
                 % CAR: Challenge Action Result
-                \resumeItem{Researched and built first stage webscraper}
+                \resumeItem{Researched and built first stage web scraper}
                 \resumeItem{Built the csv parser for an early stage startup}
-                \resumeItem{Launched several websites for small buisnesses}
+                \resumeItem{Launched several websites for small businesses}
             \resumeItemListEnd
         \resumeSubHeadingListEnd
 %-----------EDUCATION-----------
@@ -216,7 +233,7 @@
         \small{\item{
         \textbf{Languages: }{Python, SQL, Go, Scala, Java, BASH, Powershell, HTML/CSS, Javascript, R} \\
         \textbf{Technologies \& Frameworks: }{Pandas, Pyspark, Git, Neo4j, GCP, Azure, AWS, Apache Spark, Snowflake, Databricks, Docker, Delta} \\
-        \textbf{Operating Systems: }{Linux, Windos, Mac } \\
+        \textbf{Operating Systems: }{Linux, Windows, Mac } \\
         }}
     \end{itemize}
 

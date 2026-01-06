@@ -4,7 +4,7 @@ IMAGE_NAME = latex
 
 .PHONY: all build pdf clean open
 
-all: build pdf
+all: build open clean
 
 build:
 	docker build -t $(IMAGE_NAME) .

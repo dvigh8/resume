@@ -1,0 +1,58 @@
+[vars]
+image_name = "latex"
+
+[tasks.default]
+alias = "all"
+description = "Build the Docker image, generate the PDF, open it, and clean auxiliary files"
+usage = '''
+arg "[tex_file]" help="Path to the source .tex file" default="David_Vigh_Resume.tex" env="TEX_FILE"
+'''
+run = '''
+tex_file="${usage_tex_file?}"
+
+mise run build
+mise run open "$tex_file"
+mise run clean "$tex_file"
+'''
+
+[tasks.build]
+description = "Build the Docker image"
+run = "docker build -t {{ vars.image_name }} ."
+
+[tasks.pdf]
+description = "Generate the PDF"
+usage = '''
+arg "[tex_file]" help="Path to the source .tex file" default="David_Vigh_Resume.tex" env="TEX_FILE"
+'''
+run = '''
+tex_file="${usage_tex_file?}"
+tex_dir="$(cd "$(dirname "$tex_file")" && pwd)"
+tex_name="$(basename "$tex_file")"
+
+docker run --rm -i -v "$tex_dir":/data {{ vars.image_name }} pdflatex "$tex_name"
+'''
+
+[tasks.clean]
+description = "Remove auxiliary files"
+usage = '''
+arg "[tex_file]" help="Path to the source .tex file" default="David_Vigh_Resume.tex" env="TEX_FILE"
+'''
+run = '''
+tex_file="${usage_tex_file?}"
+tex_dir="$(cd "$(dirname "$tex_file")" && pwd)"
+
+rm -f "$tex_dir"/*.aux "$tex_dir"/*.log "$tex_dir"/*.out
+'''
+
+[tasks.open]
+description = "Generate and open the PDF (macOS)"
+usage = '''
+arg "[tex_file]" help="Path to the source .tex file" default="David_Vigh_Resume.tex" env="TEX_FILE"
+'''
+run = '''
+tex_file="${usage_tex_file?}"
+pdf_file="${tex_file%.*}.pdf"
+
+mise run pdf "$tex_file"
+open "$pdf_file"
+'''

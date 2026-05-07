@@ -1,9 +1,10 @@
 # Resume
 
-LaTeX resume with Docker-based PDF compilation.
+LaTeX resume with Docker-based PDF compilation via `mise` tasks.
 
 ## Requirements
 
+- mise
 - Docker
 
 ## Usage
@@ -11,16 +12,24 @@ LaTeX resume with Docker-based PDF compilation.
 Build the Docker image and generate the PDF:
 
 ```bash
-make all
+mise run
 ```
 
 Or run individual steps:
 
 ```bash
-make build   # Build Docker image
-make pdf     # Generate PDF
-make open    # Generate and open PDF (macOS)
-make clean   # Remove auxiliary files
+mise run build                      # Build Docker image
+mise run pdf                        # Generate PDF
+mise run pdf Resume_David_Vigh.tex  # Generate a different source file
+mise run all Resume_David_Vigh.tex  # Full flow with a different source file
+mise run open                       # Generate and open PDF (macOS)
+mise run clean                      # Remove auxiliary files
+```
+
+You can also override the source file with `TEX_FILE`, for example:
+
+```bash
+TEX_FILE=Resume_David_Vigh.tex mise run pdf
 ```
 
 ## License
